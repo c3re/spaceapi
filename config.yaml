@@ -1,0 +1,16 @@
+mqtt:
+ host: $MQTT_HOST
+ user: $MQTT_USER
+ password: $MQTT_PASSWORD
+
+variables:
+  doorstatus:
+    topic: c3re/hhdst
+    cast: bool
+  clubraum_temp:
+    topic: c3re/clubraumtemp
+    cast: float
+  werkstatt_temp:
+    topic: c3re/werkstatttemp
+    cast: float
+
