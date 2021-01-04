@@ -10,7 +10,7 @@ RUN apt-get install -y \
 RUN pecl install Mosquitto-alpha
 RUN echo "extension=mosquitto.so" >/etc/php/7.3/mods-available/mosquitto.ini
 RUN ln -s /etc/php/7.3/mods-available/mosquitto.ini /etc/php/7.3/cli/conf.d/20-mosquitto.ini
-ADD .. /app
+ADD . /app
 
 VOLUME /app/public
 
