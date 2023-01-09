@@ -1,44 +1,40 @@
 {
-    "api":"0.13",
-    "space":"Chaostreff Recklinghausen c3RE",
-    "logo":"https://c3re.de/wp-content/uploads/logo/Logo_weiss_rund_schwarzer_Rand.png",
-    "url":"https://c3re.de",
-    "location":{
-        "address":"Westcharweg 101, 45659 Recklinghausen",
-        "lon":7.1690101828426,
-        "lat":51.62435592244
-    },
-    "contact":{
-        "twitter":"@c3_re",
-        "email":"kontakt@c3RE.de",
-        "issue_mail":"kontakt@c3RE.de"
-        },
-    "issue_report_channels":[
-        "email"
-    ],
-    "state":{
-        "open": "{{doorstatus}}",
-        "icon": {
-            "open":"https://c3re.de/doorstatus/open.png",
-            "closed":"https://c3re.de/doorstatus/closed.png"
-        }
-    },
-    "sensors": {
-   	 "temperature": [
-     	 {
-       	 	"location": "Clubraum",
-        	"unit": "°C",
-        	"value": "{{clubraum_temp}}"
-      	},
-      	{
-        	"location": "Werkstatt",
-        	"unit": "°C",
-        	"value": "{{werkstatt_temp}}"
-      	}
-    	]
-    },
-    "projects":[
-        "https://github.com/c3re",
-        "https://git.c3re.de"
-        ]
+  "api": "0.13",
+  "space": "Chaostreff Recklinghausen c3RE",
+  "logo": "https://c3re.de/wp-content/uploads/logo/Logo_weiss_rund_schwarzer_Rand.png",
+  "url": "https://c3re.de",
+  "location": {
+    "address": "Westcharweg 101, 45659 Recklinghausen",
+    "lon": 7.1690101828426,
+    "lat": 51.62435592244
+  },
+  "contact": {
+    "twitter": "@c3_re",
+    "email": "kontakt@c3RE.de",
+    "issue_mail": "kontakt@c3RE.de"
+  },
+  "issue_report_channels": ["email"],
+  "state": {
+    "open": "{{doorstatus}}",
+    "lastchange": "{{doorstatus#timestamp}}",
+    "icon": {
+      "open": "https://c3re.de/doorstatus/open.png",
+      "closed": "https://c3re.de/doorstatus/closed.png"
+    }
+  },
+  "sensors": {
+    "temperature": [
+      {
+        "location": "Clubraum",
+        "unit": "°C",
+        "value": "{{clubraum_temp}}"
+      },
+      {
+        "location": "Werkstatt",
+        "unit": "°C",
+        "value": "{{werkstatt_temp}}"
+      }
+    ]
+  },
+  "projects": ["https://github.com/c3re", "https://git.c3re.de"]
 }
