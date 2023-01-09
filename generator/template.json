@@ -17,7 +17,11 @@
         "email"
     ],
     "state":{
-        "open": "{{doorstatus}}"
+        "open": "{{doorstatus}}",
+        "icon": {
+            "open":"https://c3re.de/doorstatus/open.png",
+            "closed":"https://c3re.de/doorstatus/closed.png"
+        }
     },
     "sensors": {
    	 "temperature": [
