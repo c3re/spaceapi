@@ -7,6 +7,9 @@ variables:
   doorstatus:
     topic: c3re/hhdst
     cast: bool
+  doorstatus_ts:
+    topic: c3re/hhdst_tsu
+    cast: int
   clubraum_temp:
     topic: c3re/clubraumtemp
     cast: float

@@ -16,7 +16,7 @@
   "issue_report_channels": ["email"],
   "state": {
     "open": "{{doorstatus}}",
-    "lastchange": "{{doorstatus#timestamp}}",
+    "lastchange": "{{doorstatus_ts}}",
     "icon": {
       "open": "https://c3re.de/doorstatus/open.png",
       "closed": "https://c3re.de/doorstatus/closed.png"
