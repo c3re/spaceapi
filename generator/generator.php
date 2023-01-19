@@ -35,10 +35,11 @@ $c->onMessage(function (\Mosquitto\Message $message) use (&$data, $conf) {
                 " unknown\n";
             die(1);
     }
+    var_dump($data);
     $data[$message->topic]["changed"] = time();
     $out = file_get_contents(__DIR__ . "/template.json");
     $out = preg_replace_callback(
-        "/{{(?<name>[^#}]+?)(#(?<modifier>[^}]+))?}}/",
+        "/\"{{(?<name>[^#}]+?)(#(?<modifier>[^}]+))?}}\"/",
         function ($m) use ($data, $conf) {
             $value = $data[$conf["variables"][$m["name"]]["topic"]]["value"];
             $modifier = isset($m["modifier"]) ? $m["modifier"] : "noop";
