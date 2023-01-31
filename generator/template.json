@@ -1,17 +1,20 @@
 {
   "api": "0.13",
-  "space": "Chaostreff Recklinghausen c3RE",
+  "space": "c3RE e.V. - Chaostreff Recklinghausen",
   "logo": "https://c3re.de/wp-content/uploads/logo/Logo_weiss_rund_schwarzer_Rand.png",
   "url": "https://c3re.de",
   "location": {
     "address": "Westcharweg 101, 45659 Recklinghausen",
     "lon": 7.1690101828426,
-    "lat": 51.62435592244
+    "lat": 51.62435592244,
+    "timezone": "Europe/Berlin"
   },
   "contact": {
     "twitter": "@c3_re",
     "email": "kontakt@c3RE.de",
-    "issue_mail": "kontakt@c3RE.de"
+    "issue_mail": "kontakt@c3RE.de",
+    "matrix": "#hackerhuette:matrix.c3re.de",
+    "mastodon": "@c3re@chaos.social"
   },
   "issue_report_channels": ["email"],
   "state": {
