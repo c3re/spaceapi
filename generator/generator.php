@@ -35,7 +35,6 @@ $c->onMessage(function (\Mosquitto\Message $message) use (&$data, $conf) {
                 " unknown\n";
             die(1);
     }
-    var_dump($data);
     $data[$message->topic]["changed"] = time();
     $out = file_get_contents(__DIR__ . "/template.json");
     $out = preg_replace_callback(
@@ -69,7 +68,9 @@ $c->onMessage(function (\Mosquitto\Message $message) use (&$data, $conf) {
     if (!is_dir("public")) {
         mkdir("public");
     }
-    file_put_contents("public/spaceapi.json", $out);
+    file_put_contents("public/spaceapi.json.new", $out);
+    // ensure atomic update
+    rename("public/spaceapi.json.new", "public/spaceapi.json");
 });
 $c->connect($conf["mqtt"]["host"]);
 $data = [];
