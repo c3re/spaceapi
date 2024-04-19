@@ -1,7 +1,7 @@
 mqtt:
- host: $MQTT_HOST
- user: $MQTT_USER
- password: $MQTT_PASSWORD
+  host: $MQTT_HOST
+  user: $MQTT_USER
+  password: $MQTT_PASSWORD
 
 variables:
   doorstatus:
@@ -16,4 +16,3 @@ variables:
   werkstatt_temp:
     topic: c3re/werkstatttemp
     cast: float
-
