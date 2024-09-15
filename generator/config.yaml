@@ -11,8 +11,8 @@ variables:
     topic: c3re/hhdst_tsu
     cast: int
   clubraum_temp:
-    topic: c3re/clubraumtemp
+    topic: c3re/huette/klima/clubraumtemp
     cast: float
   werkstatt_temp:
-    topic: c3re/werkstatttemp
+    topic: c3re/huette/klima/werkstatttemp
     cast: float
