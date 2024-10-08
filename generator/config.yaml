@@ -16,3 +16,11 @@ variables:
   werkstatt_temp:
     topic: c3re/huette/klima/werkstatttemp
     cast: float
+
+extra_files:
+  prusaxl_online.json:
+    topic: dirk/prusa-xl/online
+  prusaxl_status.json:
+    topic: dirk/prusa-xl/status
+  prusaxl_percentage.json:
+    topic: dirk/prusa-xl/percentage

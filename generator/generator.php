@@ -14,7 +14,16 @@ $c = new \Mosquitto\Client();
 if (isset($conf["mqtt"]["user"])) {
     $c->setCredentials($conf["mqtt"]["user"], $conf["mqtt"]["password"]);
 }
-$c->onMessage(function (\Mosquitto\Message $message) use (&$data, $conf) {
+$c->onMessage(function (\Mosquitto\Message $message) use (
+    &$data,
+    $conf,
+    &$extraDataMapper
+) {
+    if (isset($extraDataMapper[$message->topic])) {
+        $file = $extraDataMapper[$message->topic];
+        file_put_contents("public/$file", $message->payload);
+    }
+
     if (!isset($data[$message->topic])) {
         return;
     }
@@ -74,6 +83,7 @@ $c->onMessage(function (\Mosquitto\Message $message) use (&$data, $conf) {
 });
 $c->connect($conf["mqtt"]["host"]);
 $data = [];
+$extraDataMapper = [];
 foreach ($conf["variables"] as $name => $variable) {
     $data[$variable["topic"]] = [
         "value" => null,
@@ -82,6 +92,11 @@ foreach ($conf["variables"] as $name => $variable) {
         "changed" => 0,
     ];
     $c->subscribe($variable["topic"], 2);
+}
+foreach ($conf["extra_files"] as $fileName => $node) {
+    $topic=$node["topic"];
+    $c->subscribe($topic, 2);
+    $extraDataMapper[$topic] = $fileName;
 }
 $c->loopForever();
 
