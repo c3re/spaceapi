@@ -19,7 +19,7 @@ variables:
 
 extra_files:
   prusaxl_online.json:
-    topic: c3re/prusa-xl//online
+    topic: c3re/prusa-xl/online
   prusaxl_status.json:
     topic: c3re/prusa-xl/status/printer/state
   prusaxl_percentage.json:
