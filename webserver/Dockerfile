@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:13
 RUN apt-get update && apt-get install -y nginx-light
 ADD spaceapi.conf /etc/nginx/sites-available
 RUN rm /etc/nginx/sites-enabled/*
