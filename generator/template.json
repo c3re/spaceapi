@@ -43,5 +43,19 @@
   "projects": ["https://github.com/c3re"],
   "feeds": {
     "wiki": { "url": "https://wiki.c3re.de/"}
-  }
+  },
+  "power_consumption": [
+      {
+        "value": "{{power_usage}}",
+        "unit": "W",
+        "location": "Hütte"
+      }
+    ],
+  "power_generation": [
+      {
+        "value": "{{power_generation}}",
+        "unit": "W",
+        "location": "Hütte"
+      }
+    ]
 }

@@ -19,7 +19,12 @@ variables:
   status_msg:
     topic: c3re/hhdst_msg
     cast: string
-
+  power_usage:
+     topic: c3re/huette/energy/anschlussleistung
+     cast: float
+  power_generation:
+     topic: c3re/huette/energy/pvpower
+     cast: float
 
 extra_files:
   prusaxl_online.json:
