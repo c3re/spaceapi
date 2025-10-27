@@ -1,5 +1,5 @@
 {
-  "api": "0.13",
+  "api_compatibility": ["15"],
   "space": "c3RE e.V. - Chaostreff Recklinghausen",
   "logo": "https://c3re.de/img/c3re.png",
   "url": "https://c3re.de",
@@ -10,11 +10,11 @@
     "timezone": "Europe/Berlin"
   },
   "contact": {
-    "twitter": "@c3_re",
     "email": "kontakt@c3RE.de",
     "issue_mail": "kontakt@c3RE.de",
     "matrix": "#hackerhuette:matrix.c3re.de",
-    "mastodon": "@c3re@chaos.social"
+    "mastodon": "@c3re@chaos.social",
+    "phone": "+49 2361 8488096"
   },
   "issue_report_channels": ["email"],
   "state": {
@@ -23,7 +23,8 @@
     "icon": {
       "open": "https://c3re.de/doorstatus/open.png",
       "closed": "https://c3re.de/doorstatus/closed.png"
-    }
+    },
+    "message": "{{status_msg}}"
   },
   "sensors": {
     "temperature": [
@@ -39,5 +40,8 @@
       }
     ]
   },
-  "projects": ["https://github.com/c3re", "https://git.c3re.de"]
+  "projects": ["https://github.com/c3re"],
+  "feeds": {
+    "wiki": { "url": "https://wiki.c3re.de/"}
+  }
 }

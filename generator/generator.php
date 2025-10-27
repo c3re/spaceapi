@@ -38,6 +38,9 @@ $c->onMessage(function (\Mosquitto\Message $message) use (
         case "bool":
             $data[$message->topic]["value"] = (bool) $message->payload;
             break;
+        case "string":
+            $data[$message->topic]["value"] = (string) $message->payload;
+            break;
         default:
             echo "error, cast type " .
                 $data[$message->topic]["cast"] .

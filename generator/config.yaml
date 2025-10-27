@@ -16,6 +16,10 @@ variables:
   werkstatt_temp:
     topic: c3re/huette/klima/werkstatttemp
     cast: float
+  status_msg:
+    topic: c3re/hhdst_msg
+    cast: string
+
 
 extra_files:
   prusaxl_online.json:
